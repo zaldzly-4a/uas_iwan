@@ -1,0 +1,191 @@
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/style.css" rel="stylesheet"/>
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0c0b0b;
+  }
+  
+  .header {
+    background-color: #A9FB45;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s infinite alternate;
+  }
+  
+  .header h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    color: rgb(22, 21, 21);
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  
+  .header p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .navbar {
+    background-color: #F6987B;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  .navbar a:hover {
+    background-color: #A9FB45; /* Change to header color on hover */
+    transform: scale(1.05);
+  }
+  
+  .content {
+    background-color: #494CFE;
+    color: rgb(17, 17, 17);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+  }
+  
+  .content h2 {
+      font-size: 24px;
+      margin: 20px auto; 
+      animation: fadeInUp .5s ease forwards; /* Added fade-in effect */
+  }
+  
+  .projects {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; 
+      animation: fadeInUp .5s ease forwards; /* Added fade-in effect */
+  }
+  
+  .project {
+      background-color: #A9FB45; 
+      color: black; 
+      padding: 20px; 
+      margin:10px; 
+      border-radius :15px; 
+      width :100%; 
+      max-width :200px; 
+      text-align:center; 
+      transition :transform .3s ease, box-shadow .3s ease; 
+      animation-delay : var(--i); /* Custom delay for each project */
+  }
+  .project:hover {
+      transform :translateY(-10px) scale(1.05);
+      box-shadow :0px5px15px rgba(0,0,0,.3);
+  }
+  
+  .contact {
+      background-color :#A9FB45; 
+      padding :20px; 
+      text-align:center; 
+  }
+  
+  .contact h2 {
+      font-size :24px; 
+      margin-bottom :20px; 
+  }
+  
+  .contact p { 
+     margin :5px0; 
+     opacity :0; 
+     animation-name : slideInUp; 
+     animation-duration :1s; 
+     animation-fill-mode :forwards; 
+     animation-delay :var(--i); /* Custom delay for each paragraph */
+     --i :calc(var(--n) * var(--delay)); /* Dynamic delay */
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+     from { opacity :0; }
+     to { opacity :1; }
+  }
+  
+  @keyframes bounce {
+     from { transform :translateY(0); }
+     to { transform :translateY(-10px); }
+  }
+  
+  @keyframes slideInLeft {
+     from { transform :translateX(-100%); opacity :0;}
+     to { transform :translateX(0); opacity :1;}
+  }
+  
+  @keyframes slideInUp {
+     from { transform :translateY(20px); opacity :0;}
+     to { transform :translateY(0); opacity :1;}
+  }
+  
+  /* Media Queries */
+  @media (max-width :600px) {
+     .projects {
+         flex-direction :column; 
+         align-items:center; 
+     } 
+  }
+  
+  </style>
+</head>
+<body>
+<div class="header">
+   <img alt="Profile picture of Iwan Nur" height="100" src="profile.jpeg" width="100"/>
+   <h1>IWAN NUR</h1>
+   <p>Program Studi Sistem Informasi</p>
+</div>
+<div class="navbar">
+   <a href="#">Home</a>
+   <a href="#">Profile</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
+</div>
+<div class="content">
+   <img alt="A person looking at a scenic view with trees and mountains" height="200" src="foto2.jpeg" width="150"/>
+   <h2>About Me</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <h2>Our Project</h2>
+   <div class="projects">
+       <div class="project">Computer Hardware Engineer</div>
+       <div class="project">IT Project Manager</div>
+       <div class="project">Cyber Security Specialist</div>
+   </div>
+</div>
+<div class="contact">
+   <h2>Contact Us</h2>
+   <p style="--n :1; --delay :0.1s;">Jl.Penghijau ,Desa Subur No.66,Kec.Air Joman,Kab.Asahan
+    Provinsi.Sumatera Utara 27426</p>
+   <p style="--n :2; --delay :0.1s;">Phone..081269137747</p>
+   <p style="--n :3; --delay :0.1s;">Mail.myportfolio.com </p>
+   <p style="--n :4; --delay :0.1s;">Instagram.@iwan_nur46 </p>
+   <img alt="Map showing the location of the address mentioned" height="200" src="map.jpeg" width="300"/>
+</div>
+</body>
+</html>
